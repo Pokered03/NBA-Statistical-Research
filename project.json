@@ -15,5 +15,6 @@
   "visibility": "public",
   "deployment_url": "https://nba-statistical-research.streamlit.app/",
   "refresh_cron_utc": "23 10 * * *",
-  "hosted_refresh_run": "https://github.com/Pokered03/NBA-Statistical-Research/actions/runs/40114310755"
+  "hosted_refresh_run": "https://github.com/Pokered03/NBA-Statistical-Research/actions/runs/40114310755",
+  "hosted_final_refresh_run": "https://github.com/Pokered03/NBA-Statistical-Research/actions/runs/40114559404"
 }

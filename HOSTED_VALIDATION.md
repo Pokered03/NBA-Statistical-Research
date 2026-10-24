@@ -20,6 +20,8 @@ The user approved public repositories and dashboards for NBA and the remaining f
 - A second independent browser session loaded while the first stayed active. It picked up the **2026-10-24T17:03:06.252958+00:00** worker timestamp and refreshed Miami/Charlotte records from one to two observed games. This is a basic concurrency check, not a load test.
 - A final NBA label/source cleanup also passed all 38 tests (3 unrelated sport cases skipped, 2.15 seconds locally).
 
+- Final correction refresh https://github.com/Pokered03/NBA-Statistical-Research/actions/runs/40114559404 also **succeeded in 48 seconds**. The live page showed its **2026-10-24T17:06:27.119165+00:00** rebuild timestamp. Calendar selection of October 25 changed the page to Lakers–Jazz, verifying research-date changes.
+
 ## Independent automatic refresh
 
 ENABLE_FREE_REFRESH=true is set. Daily cron **10:23 UTC** (6:23 AM Eastern during daylight time; 5:23 AM Eastern during standard time), subject to GitHub scheduling delays. The workflow requires a public repository, uses the standard ubuntu-latest free runner, and creates no cache/artifact storage. No paid sports APIs, Odds API credits, paid hosting or larger paid runners are used. This is daily updating, not immediate end-of-game updating; public schedules may require re-enabling after inactivity.
