@@ -80,7 +80,7 @@ BASKETBALL=[per('adjusted_ortg','Adjusted offense / 100 poss.','Offense',note='S
  ratio('tovrate','Turnovers / 100 possessions','Offense',[('tov',1)],[('poss',1)],100,-1),
  per('assists','Assists / game','Offense'),per('paint','Paint points / game','Offense'),per('blocks','Blocks / game','Defense'),
  per('steals','Steals / game','Defense'),ratio('opp_efg','Opponent effective FG percentage','Defense',[('opp_fgm',1),('opp_fg3m',.5)],[('opp_fga',1)],100,-1),
- per('bench','Bench points [player roles needed]','Offense'),per('lineup','Starting lineup continuity [unavailable]','Situational',0)]
+ per('bench','Bench points (reconciled player boxes)','Offense'),per('lineup','Starting lineup continuity [unavailable]','Situational',0)]
 BASEBALL=[ratio('avg','Batting average','Offense',[('hits',1)],[('ab',1)],1),
  ratio('obp','On-base percentage','Offense',[('hits',1),('bb',1),('hbp',1)],[('ab',1),('bb',1),('hbp',1),('sf',1)],1),
  ratio('slg','Slugging percentage','Offense',[('hits',1),('doubles',1),('triples',2),('hr',3)],[('ab',1)],1),

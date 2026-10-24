@@ -33,6 +33,6 @@ def evaluate(cal,test):
             projection=r['margin']+line if kind=='spread' else r['total']-line
             p=sum(projection+e>0 for e in errors[kind])/len(errors[kind])
             rows.append({'p':p,'y':int(actual>0)});lines.append(line)
-        d=metrics(rows);d.update({'pushes_excluded':pushes,'source':'nflverse schedule historical closing line','line_range':[min(lines),max(lines)] if lines else None})
+        d=metrics(rows);d.update({'pushes_excluded':pushes,'source':'nflverse schedule historical closing line' if lines else None,'line_range':[min(lines),max(lines)] if lines else None})
         report[kind]=d
     return report
