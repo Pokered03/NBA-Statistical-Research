@@ -1,6 +1,6 @@
 # NBA Statistical Research Dashboard
 
-Status: **independently implemented and locally tested development build; not deployed; not complete.**
+Status: **live development build; initial hosted checks passed; full specification not complete.**
 
 This repository is a single-sport, standalone Streamlit research application. It has no runtime dependency on another project, no imports from another dashboard, and no access to the existing Multi-Sport Value Engine. Every project has its own SQLite file, worker, model, caches, dependency specification and optional refresh workflow.
 
@@ -45,7 +45,7 @@ No Odds API key is read, requested, or used. No paid data integration is enabled
 
 Bench points are reconstructed from player boxes only when exactly five reported starters and the sum of player points reconcile with the final score. Observed rotations include reported starters, recorded minutes and recent lineup changes, with source timestamps. Conflicting provider active/DNP/reason fields are not used to infer injury status. These observations do not automatically adjust forecasts.
 
-Unverified injury/availability feeds, some requested advanced inputs, public redistribution permissions, account-backed deployment, active refresh schedules and actual host-limit/browser checks remain unfinished. The full specification has not been completed.
+Unverified injury/availability feeds, some requested advanced inputs, some metric redistribution permissions, real mobile testing and extended hosted stability checks remain unfinished. The full specification has not been completed.
 
 ## Confidence panels
 
@@ -68,15 +68,15 @@ The local target is cold AppTest render under 10 seconds, matchup switching unde
 
 ## GitHub and deployment preparation
 
-The private [Pokered03/NBA-Statistical-Research](https://github.com/Pokered03/NBA-Statistical-Research) repository contains this independent application, its prepared database, engine, attribution, tests and guarded refresh workflow. Its downloaded archive was compared against all 46 original tracked files with no missing or changed bytes. See PUBLICATION_CHECKPOINT.md for measurements. The existing Multi-Sport Value Engine and NFL application were not modified.
+The public [Pokered03/NBA-Statistical-Research](https://github.com/Pokered03/NBA-Statistical-Research) repository contains this independent application, its prepared database, engine, attribution, tests and guarded refresh workflow. Its downloaded archive was compared against all 46 original tracked files with no missing or changed bytes. See PUBLICATION_CHECKPOINT.md for measurements. The existing Multi-Sport Value Engine and NFL application were not modified.
 
-Use Streamlit Community Cloud with branch `main`, entry file `app.py`, and Python 3.12. The root `requirements.txt` and `.streamlit/config.toml` are included. The supplied Dockerfile is an alternative for an existing approved hosting account. Neither platform has been provisioned for this project. Do not pay for hosting without explicit approval.
+Use Streamlit Community Cloud with branch `main`, entry file `app.py`, and Python 3.12. The root `requirements.txt` and `.streamlit/config.toml` are included. The supplied Dockerfile is an alternative for an existing approved hosting account. Streamlit Community Cloud is provisioned at [nba-statistical-research.streamlit.app](https://nba-statistical-research.streamlit.app/). Initial live checks and the first data refresh passed; see HOSTED_VALIDATION.md. No alternative hosting account is provisioned. Do not pay for hosting without explicit approval.
 
 Verify the free account’s app count, privacy rules, sleeping behavior, actual memory allocation and execution quota before deployment. After deployment, test scheduled selection, manual comparisons, historical seasons, missing-data cases, mobile layout, repeated switching, concurrent sessions, restarts and actual hosting memory. Record the resulting independent URL; do not invent one.
 
-## Automatic schedule: prepared, OFF until free quota verified
+## Automatic schedule: enabled for public free runners
 
-`.github/workflows/refresh.yml` is independent for this repository. Its scheduled and manual jobs are guarded by `ENABLE_FREE_REFRESH == 'true'`; no jobs will run until that repository variable is explicitly enabled and the repository is public. This prevents unapproved private-repository Actions charges. Confirm included minutes and a spending cap before enabling. The prepared cron is listed in that file in UTC. It is daily, not a real-time end-of-game service. More frequent updates need a verified free scheduler/quota and source freshness checks.
+`.github/workflows/refresh.yml` is independent for this repository. Its scheduled and manual jobs are guarded by `ENABLE_FREE_REFRESH == 'true'`; the variable is enabled, and the workflow also requires a public repository. It uses a standard ubuntu-latest runner with no cache or artifact storage. Public standard runners are free; the guard stops updates if this repository becomes private. The prepared cron is listed in that file in UTC. It is daily, not a real-time end-of-game service. More frequent updates need a verified free scheduler/quota and source freshness checks.
 
 The workflow commits the small prepared database and validation summary; Streamlit can redeploy from that commit. For long-term heavy use, monitor Git history growth and migrate the database to an independently managed approved object store. That storage integration is not configured.
 

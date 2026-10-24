@@ -79,7 +79,7 @@ try:
         if max((now.date()-date.fromisoformat(s['last_date'])).days for s in (sa,sb))> (14 if SPORT in ('nfl','cfb') else 7):st.warning('One or both teams’ completed-game data is old. This may be offseason or a delayed upstream feed; check the source coverage.')
     for section in ['Offense','Defense','Situational']:
         st.markdown(table(section,sa,sb,names[a],names[b],recent,'Season' if neutral else 'Away','Season' if neutral else 'Home'),unsafe_allow_html=True)
-    st.caption('Colors: top third green · middle third yellow · bottom third red, ranked in the selected split. Every cell shows its observed sample size. N/A means missing data. Swipe tables sideways on iPhone. FBS/FCS ranks are separate.')
+    st.caption('Colors: top third green · middle third yellow · bottom third red, ranked in the selected split. Every cell shows its observed sample size. N/A means missing data. Swipe tables sideways on iPhone.')
     if SPORT=='mlb':st.caption('† MLB Season batting/pitching cells use official regular-season totals where available. Recent/home/away windows require individual game boxes. Full-season scoring rows may include postseason results. Scope and provider timestamps are separate; no rolling figures are inferred from season totals.')
     st.subheader('Opponent quality & recent form')
     cols=st.columns(2)
@@ -104,7 +104,7 @@ try:
         h2h=store.head_to_head(a,b)
         if h2h:st.dataframe([{k:g[k] for k in ('date','away_name','away_score','home_name','home_score','venue')} for g in h2h],hide_index=True,width='stretch')
         else:st.caption('No head-to-head history in the independently stored seasons.')
-    with st.expander('Availability, starters, weather & advanced-data limitations'):
+    with st.expander('Player availability, observed roles & data limitations'):
         st.write('Current injury status and starting goaltenders are not inferred. Observed player roles and official probable pitchers, when present below, are descriptive context. Player-role changes, rest, starters and weather are not calibrated model adjustments in this version.')
         if SPORT in ('nba','cbb'):
             for tid in (a,b):
