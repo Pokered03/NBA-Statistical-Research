@@ -1,0 +1,23 @@
+{
+  "sport": "nba",
+  "database_bytes": 6361088,
+  "seasons": [
+    {
+      "season": 2024,
+      "games": 1321
+    },
+    {
+      "season": 2025,
+      "games": 1326
+    },
+    {
+      "season": 2026,
+      "games": 1326
+    },
+    {
+      "season": 2027,
+      "games": 1200
+    }
+  ],
+  "integrity": "ok"
+}

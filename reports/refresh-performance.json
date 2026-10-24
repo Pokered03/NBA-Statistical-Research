@@ -1,0 +1,9 @@
+{
+  "sport": "nba",
+  "operation": "Active-season cached free-data refresh plus full chronological validation",
+  "seconds": 1.8961403849998533,
+  "worker_peak_rss_mib": 237.9375,
+  "exit_code": 0,
+  "target_peak_rss_mib": 650,
+  "hosting_environment": false
+}

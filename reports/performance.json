@@ -1,0 +1,35 @@
+{
+  "sport": "nba",
+  "environment": "local Streamlit AppTest; not deployed hosting",
+  "cold_render_seconds": 0.6956717059997573,
+  "initial_matchup_render_seconds": 0.04864973099984127,
+  "switch_p95_seconds": 0.08532127800026501,
+  "switches": 64,
+  "rss_samples": [
+    {
+      "switch": 8,
+      "peak_rss_mib": 140.1328125
+    },
+    {
+      "switch": 16,
+      "peak_rss_mib": 141.5546875
+    },
+    {
+      "switch": 32,
+      "peak_rss_mib": 143.30859375
+    },
+    {
+      "switch": 64,
+      "peak_rss_mib": 143.64453125
+    }
+  ],
+  "peak_rss_mib": 143.64453125,
+  "db_mib": 6.06640625,
+  "targets": {
+    "cold_render_seconds": 10,
+    "switch_p95_seconds": 2,
+    "peak_rss_mib": 350
+  },
+  "actual_host_limits_tested": false,
+  "local_targets_pass": true
+}

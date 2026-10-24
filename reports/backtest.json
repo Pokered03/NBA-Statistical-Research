@@ -1,0 +1,120 @@
+{
+  "n": 1655,
+  "brier": 0.2068401581617098,
+  "baseline_brier": 0.25,
+  "accuracy": 0.683987915407855,
+  "margin_mae": 11.612433055799146,
+  "total_mae": 15.107981647433729,
+  "ece": 0.028989321833148552,
+  "calibration_bins": [
+    {
+      "lower": 0.0,
+      "n": 3,
+      "predicted": 0.08936295081805691,
+      "observed": 0.0
+    },
+    {
+      "lower": 0.1,
+      "n": 38,
+      "predicted": 0.16436033752574075,
+      "observed": 0.15789473684210525
+    },
+    {
+      "lower": 0.2,
+      "n": 143,
+      "predicted": 0.2565795987669919,
+      "observed": 0.22377622377622378
+    },
+    {
+      "lower": 0.3,
+      "n": 214,
+      "predicted": 0.35256062867020355,
+      "observed": 0.29906542056074764
+    },
+    {
+      "lower": 0.4,
+      "n": 277,
+      "predicted": 0.4513045191858039,
+      "observed": 0.45126353790613716
+    },
+    {
+      "lower": 0.5,
+      "n": 328,
+      "predicted": 0.5494222255525134,
+      "observed": 0.5884146341463414
+    },
+    {
+      "lower": 0.6,
+      "n": 280,
+      "predicted": 0.6460779127157884,
+      "observed": 0.6714285714285714
+    },
+    {
+      "lower": 0.7,
+      "n": 236,
+      "predicted": 0.7464376811387056,
+      "observed": 0.7923728813559322
+    },
+    {
+      "lower": 0.8,
+      "n": 120,
+      "predicted": 0.8397716869363995,
+      "observed": 0.8416666666666667
+    },
+    {
+      "lower": 0.9,
+      "n": 16,
+      "predicted": 0.9151538934621825,
+      "observed": 0.9375
+    }
+  ],
+  "margin_interval_80_coverage": 0.7879154078549849,
+  "version": "adjusted-score-v1",
+  "status": "tested",
+  "gate": true,
+  "calibration_n": 2029,
+  "calibration_through": "2025-03-01",
+  "test_from": "2025-03-02",
+  "test_through": "2026-06-13",
+  "oos_games": 3684,
+  "calibrator": {
+    "intercept": -0.055763856915847516,
+    "slope": 1.0410512799911267
+  },
+  "margin_sd": 14.369919312675904,
+  "margin_q10": -18.161155802133717,
+  "margin_q90": 17.741036344044378,
+  "total_q10": -25.0458568477192,
+  "total_q90": 23.2268701322021,
+  "baseline_margin_mae": 13.299940331173232,
+  "baseline_total_mae": 15.982983486962564,
+  "reason": "Gate requires >=200 calibration and test games, ECE <=0.10, Brier better than 50%, successful calibration. Thresholds are engineering safeguards, not proof of profitability.",
+  "exclusions": "Draws excluded from win calibration; all scoring includes overtime/shootout scores as reported. No historical market prices are available; spread/total category reliability is unvalidated.",
+  "market_validation": {
+    "spread": {
+      "n": 0,
+      "gate": false,
+      "reason": "No verified historical lines.",
+      "pushes_excluded": 0,
+      "source": "nflverse schedule historical closing line",
+      "line_range": null
+    },
+    "total": {
+      "n": 0,
+      "gate": false,
+      "reason": "No verified historical lines.",
+      "pushes_excluded": 0,
+      "source": "nflverse schedule historical closing line",
+      "line_range": null
+    }
+  },
+  "early": {
+    "n": 84,
+    "margin_mae": 10.262351158437832
+  },
+  "late": {
+    "n": 1571,
+    "margin_mae": 11.684620757504016
+  },
+  "generated_at": "2026-10-24T10:08:26.901148+00:00"
+}
