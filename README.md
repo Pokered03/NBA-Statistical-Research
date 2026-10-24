@@ -68,13 +68,7 @@ The local target is cold AppTest render under 10 seconds, matchup switching unde
 
 ## GitHub and deployment preparation
 
-Create a new repository named `NBA-Statistical-Research` in the user’s GitHub account and push only this project. The current connected tools could not create new repositories; the browser required sign-in. No changes were made to the existing Multi-Sport Value Engine.
-
-A locally authenticated GitHub CLI can publish this prepared repository after its source/license/privacy choices are settled:
-
-```bash
-gh repo create Pokered03/NBA-Statistical-Research --private --source . --remote origin --push
-```
+The private [Pokered03/NBA-Statistical-Research](https://github.com/Pokered03/NBA-Statistical-Research) repository contains this independent application, its prepared database, engine, attribution, tests and guarded refresh workflow. Its downloaded archive was compared against all 46 original tracked files with no missing or changed bytes. See PUBLICATION_CHECKPOINT.md for measurements. The existing Multi-Sport Value Engine and NFL application were not modified.
 
 Use Streamlit Community Cloud with branch `main`, entry file `app.py`, and Python 3.12. The root `requirements.txt` and `.streamlit/config.toml` are included. The supplied Dockerfile is an alternative for an existing approved hosting account. Neither platform has been provisioned for this project. Do not pay for hosting without explicit approval.
 

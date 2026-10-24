@@ -2,12 +2,14 @@
   "repository": "NBA-Statistical-Research",
   "sport": "nba",
   "independent": true,
-  "deployment_status": "not_deployed",
+  "deployment_status": "awaiting_public_visibility_approval",
   "scheduled_refresh_enabled": false,
   "expected_teams": 30,
   "data_source_status": "integrated_with_documented_gaps",
   "status": "locally_tested_development_build_incomplete",
   "github_repository_created": true,
   "local_tests_passed": 38,
-  "repository_url": "https://github.com/Pokered03/NBA-Statistical-Research"
+  "repository_url": "https://github.com/Pokered03/NBA-Statistical-Research",
+  "github_published": true,
+  "github_verified_commit": "e5edf68055c679d3751f5c51019da9a18760f87c"
 }
