@@ -1,11 +1,11 @@
 {
-  "n": 1666,
-  "brier": 0.20719310015099718,
+  "n": 1667,
+  "brier": 0.20714526315381687,
   "baseline_brier": 0.25,
-  "accuracy": 0.6824729891956782,
-  "margin_mae": 11.60505812285529,
-  "total_mae": 15.053201830913018,
-  "ece": 0.029604042568611117,
+  "accuracy": 0.6826634673065387,
+  "margin_mae": 11.606970262887494,
+  "total_mae": 15.053615525535129,
+  "ece": 0.029800440717096855,
   "calibration_bins": [
     {
       "lower": 0.0,
@@ -45,9 +45,9 @@
     },
     {
       "lower": 0.6,
-      "n": 277,
-      "predicted": 0.6462061568170295,
-      "observed": 0.6787003610108303
+      "n": 278,
+      "predicted": 0.6461946247561973,
+      "observed": 0.6798561151079137
     },
     {
       "lower": 0.7,
@@ -68,15 +68,15 @@
       "observed": 0.9375
     }
   ],
-  "margin_interval_80_coverage": 0.7857142857142857,
+  "margin_interval_80_coverage": 0.7858428314337133,
   "version": "adjusted-score-v1",
   "status": "tested",
   "gate": true,
   "calibration_n": 2045,
   "calibration_through": "2025-03-03",
   "test_from": "2025-03-04",
-  "test_through": "2026-11-04",
-  "oos_games": 3711,
+  "test_through": "2026-11-05",
+  "oos_games": 3712,
   "calibrator": {
     "intercept": -0.06344233470610619,
     "slope": 1.0465786328946962
@@ -86,8 +86,8 @@
   "margin_q90": 17.5323123914546,
   "total_q10": -25.038842985543614,
   "total_q90": 23.284940950554084,
-  "baseline_margin_mae": 13.284856756736168,
-  "baseline_total_mae": 15.904318935546812,
+  "baseline_margin_mae": 13.28777327175268,
+  "baseline_total_mae": 15.899308267404715,
   "reason": "Gate requires >=200 calibration and test games, ECE <=0.10, Brier better than 50%, successful calibration. Thresholds are engineering safeguards, not proof of profitability.",
   "exclusions": "Draws excluded from win calibration; all scoring includes overtime/shootout scores as reported. No historical market prices are available; spread/total category reliability is unvalidated.",
   "market_validation": {
@@ -109,12 +109,12 @@
     }
   },
   "early": {
-    "n": 111,
-    "margin_mae": 10.23705019894006
+    "n": 112,
+    "margin_mae": 10.277724711061463
   },
   "late": {
     "n": 1555,
     "margin_mae": 11.702710135430591
   },
-  "generated_at": "2026-11-06T11:14:43.555471+00:00"
+  "generated_at": "2026-11-07T10:56:55.678978+00:00"
 }
